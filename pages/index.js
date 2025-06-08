@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import '../styles/globals.css';
 
 const tabs = [
   'ShopBot AI',
