@@ -26,22 +26,30 @@ export default function Home() {
     <div className="min-h-screen bg-gray-100 p-6">
       <h1 className="text-3xl font-bold mb-6 text-center">AMST Tools</h1>
       <div className="grid grid-cols-4 gap-3 mb-2">
-        {tabs.slice(0, 4).map(tab => (
+        {tabs.slice(0, 4).map((tab) => (
           <button
             key={tab}
             onClick={() => setActiveTab(tab)}
-            className={\`p-3 rounded-2xl font-medium transition \${activeTab === tab ? 'bg-blue-600 text-white shadow' : 'bg-white text-black border'}\`}
+            className={
+              activeTab === tab
+                ? 'p-3 rounded-2xl font-medium transition bg-blue-600 text-white shadow'
+                : 'p-3 rounded-2xl font-medium transition bg-white text-black border'
+            }
           >
             {tab}
           </button>
         ))}
       </div>
       <div className="grid grid-cols-4 gap-3">
-        {tabs.slice(4).map(tab => (
+        {tabs.slice(4).map((tab) => (
           <button
             key={tab}
             onClick={() => setActiveTab(tab)}
-            className={\`p-3 rounded-2xl font-medium transition \${activeTab === tab ? 'bg-blue-600 text-white shadow' : 'bg-white text-black border'}\`}
+            className={
+              activeTab === tab
+                ? 'p-3 rounded-2xl font-medium transition bg-blue-600 text-white shadow'
+                : 'p-3 rounded-2xl font-medium transition bg-white text-black border'
+            }
           >
             {tab}
           </button>
